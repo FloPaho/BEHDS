@@ -1,0 +1,37 @@
+---
+title: "**BEHDS**"
+subtitle: "**BEH**AVIOURAL BI**DS** \n\n **BEH**AVIOURAL **D**ATA **S**TRUCTURE MANAGER"
+format:
+  html:
+    toc: true
+---
+## What is BEHDS?
+
+BEHDS is a tool for data management of behavioural scientific data that automatically transforms multiple data files into the standardized BIDS format (Behavioural bids) and into combined .csv files (Behavioural data structure manager).
+
+## What are the benefits of using BEHDS?
+
+-   Standardized and transparent output file
+
+-   Feedback about progress of the project
+
+-   Feedback about missing data
+
+-   Feedback about impossible values
+
+-   Overview of the questionnaires used
+
+-   Automated creation of a BIDS data structure for the project
+
+-   Automatic calculation of inverted scales
+
+-   Automatic calculation of total scores and subscale scores (optional)
+
+
+## Background
+
+The realm of neuroimaging and behavioral research is rapidly evolving, necessitating standardized data formats to facilitate data sharing, reproducibility, and secondary analysis. Currently, a significant gap exists in tools that seamlessly convert behavioral questionnaire data into a widely accepted format. Our custom program bridges this gap by offering a streamlined solution for converting varied behavioral data into the Brain Imaging Data Structure (BIDS) format. This conversion is pivotal for researchers and students who work with behavioral data, as it not only enhances data organization and accessibility but also ensures compliance with the growing standards of neuroimaging data analysis. The adoption of BIDS for behavioral data allows for greater integration with neuroimaging datasets, opening avenues for comprehensive multimodal analyses. As no such programs are widely available, our tool represents a significant advancement in the field, offering an intuitive, efficient pathway to standardization that is crucial for advancing research and facilitating collaborations across institutions.
+
+## Target Audience
+
+This documentation is designed for students and researchers working with behavioral data, particularly those in the fields of psychology, neuroscience, and cognitive science. Whether you are new to data analysis or an experienced researcher looking for a standardized way to manage and share your data, this guide will help you understand how to use our program to convert your behavioral questionnaire data into the BIDS format effectively.

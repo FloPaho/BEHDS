@@ -1,0 +1,26 @@
+---
+title: "BIDS Format and Validation"
+format:
+  html:
+    toc: true
+---
+
+## BIDS Format
+
+The Brain Imaging Data Structure (BIDS) is a standardized framework for organizing and describing neuroimaging and behavioral data. Following the BIDS standard involves arranging your data into a specific folder structure and naming files in a way that describes their content or the experiments they relate to. This structure not only facilitates data sharing and reuse but also streamlines data analysis by making datasets understandable to both humans and machines.
+
+BIDS organizes data into datasets that contain multiple modalities (e.g., MRI, behavioral experiments) each within its own subdirectory. Each dataset includes:
+
+- A descriptive text file (`dataset_description.json`) at the dataset root that specifies the dataset name and other metadata.
+- A participants.tsv file that lists all participants and can include columns for different participant attributes.
+- Subdirectories for each subject (`sub-<label>`), containing subdirectories for each session (`ses-<label>`) if applicable, and further, modality-specific files and folders within these.
+
+For behavioral data, specific conventions and file formats are recommended to ensure compatibility and interoperability with neuroimaging data stored in BIDS format.
+
+## BIDS Validation
+
+To ensure that a dataset adheres to the BIDS standard, it must be validated using a BIDS Validator. The BIDS Validator checks the structure and naming conventions of your dataset to identify any deviations from the BIDS specifications.
+
+- **Using the BIDS Validator**: You can use the online version of the BIDS Validator or install it locally. For instructions and access to the validator, visit the [BIDS Validator webpage](https://bids-standard.github.io/bids-validator/).
+
+For more detailed information about the BIDS specification, including how to structure and describe your data, visit the [BIDS Specification website](https://bids-specification.readthedocs.io/en/stable/).
