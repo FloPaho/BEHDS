@@ -1,0 +1,121 @@
+[
+  {
+    "objectID": "requirements.html",
+    "href": "requirements.html",
+    "title": "Software Requirements",
+    "section": "",
+    "text": "Before installing and using our custom program, ensure that you have the following software installed on your computer:"
+  },
+  {
+    "objectID": "requirements.html#download-and-install-r",
+    "href": "requirements.html#download-and-install-r",
+    "title": "Software Requirements",
+    "section": "Download and Install R",
+    "text": "Download and Install R\nSince R-Studio requires R to be installed first, follow these steps to download and install R based on your operating system:\n\nWindows\n\nGo to the CRAN website.\nClick “Download R for Windows.”\nClick on “base” and then “Download R 4.x.x for Windows” (the latest version number will be displayed).\nAfter downloading, open the installer and follow the instructions to complete the installation.\n\n\n\nmacOS\n\nGo to the CRAN website.\nClick “Download R for macOS.”\nSelect the .pkg file for the latest version of R and download it.\nOpen the .pkg file and follow the prompts to complete the installation.\n\n\n\nLinux\n\nGo to the CRAN website.\nClick “Download R for Linux.”\nFollow the instructions specific to your Linux distribution to install R using your package manager."
+  },
+  {
+    "objectID": "requirements.html#download-and-install-r-studio",
+    "href": "requirements.html#download-and-install-r-studio",
+    "title": "Software Requirements",
+    "section": "Download and Install R-Studio",
+    "text": "Download and Install R-Studio\nOnce R is installed, you can proceed to install R-Studio:\n\nVisit the R-Studio download page.\nUnder the “RStudio Desktop” section, click “Download.”\nChoose the version that matches your operating system (Windows, macOS, or Linux).\n\n\nWindows\n\nDownload the .exe installer and run it.\nFollow the on-screen instructions to complete the installation.\n\n\n\nmacOS\n\nDownload the .dmg file and open it.\nDrag the R-Studio icon into your Applications folder.\n\n\n\nLinux\n\nFollow the instructions provided for your distribution to install R-Studio."
+  },
+  {
+    "objectID": "requirements.html#spreadsheet-software-installation",
+    "href": "requirements.html#spreadsheet-software-installation",
+    "title": "Software Requirements",
+    "section": "Spreadsheet Software Installation",
+    "text": "Spreadsheet Software Installation\nYou will need either Microsoft Excel or LibreOffice Calc to work with the templates provided in the conversion process.\n\nOption 1: Microsoft Excel\n\n\nDownload and Install Microsoft Excel\n\n\nStep 1: Purchase Microsoft Office\n\nGo to the Microsoft Office page.\nChoose either a subscription-based plan (Microsoft 365) or a one-time purchase (Office 2021), which includes Excel.\n\n\n\nStep 2: Download and Install\n\nAfter purchasing, sign in to your Microsoft account.\nGo to the Office installation page.\nClick “Install” and follow the instructions to install Office on your computer.\n\nFor more support, visit Microsoft Office Support."
+  },
+  {
+    "objectID": "Example.html",
+    "href": "Example.html",
+    "title": "Example Workflow",
+    "section": "",
+    "text": "On this page we show you an Example Workflow of BEHDS based on fictional questionnaires and data. This Example is also included in the download."
+  },
+  {
+    "objectID": "Example.html#initial-setup",
+    "href": "Example.html#initial-setup",
+    "title": "Example Workflow",
+    "section": "Initial Setup",
+    "text": "Initial Setup\nDownload BEHDS from here.\nAfter downloading and extracting BEHDS, you should have the following folder structure:\n\nBEHDS 1.0.0/\n\ncode/\nprojectdata/\nrawdata/\nresources/\ntemplates/\nbehds.R\n\n\n\nStep 1: Preparing Project Data\nFirst, create a project folder within the projectdata/ directory and name it according to your project. For this guide, we will name the project folder Example.\nNext, copy template.xlsx, template_info.xlsx and template_id.xlsx (optional) from the templates/ folder into your project folder. Rename these files to Example.xlsx, Example_info.xlsx and Example_id.xlsx, respectively.\n \nOnce the files are renamed, open all of them in Excel. You will need to input data specific to your project.\nIn this example, the project uses the questionnaires “Silly” and “SPSS.” Additionally, demographic data, such as age, sex, handshakes, socks, dance, superpower, and group, were collected outside the questionnaires. Be sure to carefully read the headers in the template and fill in the information accordingly.\nFor example:\n\nDefine units such as “Years” for “Age.”\nSpecify open-ended questions and scales when necessary.\n\n\n\n\n\n\n\n\n\nStep 2: Organizing Raw Data\nNext, create a folder named Example inside the rawdata/ directory. In this folder, you will store your raw data files. It’s best to maintain a consistent naming convention for easier management.\nIn this example, we have four files. The naming conventions are flexible, but consistency helps avoid errors. The files will include demographic data and information from multiple sessions.\n\n\n\nRawdata_Example\n\n\nFor our example, we did a prescreening, where we assessed demographic data. We changed the first row to id and put in the id of the participants. The second row is called ses and we put in the session. Since we did a prescreening, we give it 0.\n\nExample_ses-0.xlsx for demographic data.\n\n\n\nRawdata_Example_ses0\n\n\n\nWe also have the data of three online surveys for each of the three sessions. Therefore we put in the ses column the number of the session.\n\nExample_ses-1.xlsx for session 1 data.\n\n\n\n\n\nRawdata_Example_ses1\n\n\n\nNote: You can create multiple files containing all your data; it does not all have to be in one file. Ensure the “id” and “ses” columns are correct in each file.\n\n\nStep 3: Structuring Raw Data Files\nEach raw data file needs to follow a specific structure. Here’s how to format the columns:\n\nID Column: The first column should be named “id.” It should contain the participant ID, which must remain consistent across all files to ensure proper data merging.\nSession Column: The second column should be named “ses.” This indicates the session or measurement time point (e.g., 1, 2, 3). If there’s only one session, enter “1.”\n\nEnsure that you fill out each column correctly, as errors in this step can lead to issues later during data analysis.\n\n\nStep 4: Using Pre-existing Questionnaires\nNow, check the resources/ folder to see if your questionnaire already exists. If it does not, create a new questionnaire file.\n\n\n\n\n\n\nResources_SILLY\n\n\n\n\n\nStep 5: Creating a New Questionnaire\nIf your questionnaire does not exist (e.g., “SPSS”), you will need to create one:\n\nCopy questionnaire_template.xlsx from the templates/ folder into your projectdata/ folder.\nRename it to match your questionnaire, such as SPSS.xlsx.\nOpen the file and fill in the required information based on the questionnaire. Follow the column headers’ instructions carefully.\n\nIf done correctly, your file should look similar to this:\n\n\n\n\nResources_SPSS\n\n\n\n\n\nFinal Data Structure\nOnce all the files are created and filled out, your data structure should look like this:\n\nprojectdata/\n\nExample/\n\nExample.xlsx\nExample_info.xlsx\nSPSS.xlsx\n\n\nrawdata/\n\nExample/\n\nExample_ses-0.xlsx\nExample_ses-1.xlsx\nExample_ses-2.xlsx\n…\n\n\nresources/\n\nSPSS.xlsx\n…\n\n\n\n\nStep 6: Running BEHDS.R\nNow, you’re ready to run the program.\n\nOpen behds.R in RStudio. The file is located in the root folder, BEHDS 1.0.0.\nOn the second line of the script, enter your project name:\n\nproj = \"Example\"\n\nPress the Source button in the upper-right corner of the RStudio code window.\nWait for the process to complete. This may take some time.\nOnce finished, you will find the BIDS-compliant structure in bids/Example/rawdata.\nThe feedback file Example.html will be available in bids/Example/derivatives alongside the completed .csv files.\n\n\n\n\n\nRStudio_source"
+  },
+  {
+    "objectID": "behds.html",
+    "href": "behds.html",
+    "title": "BIDS Format and Validation",
+    "section": "",
+    "text": "This page provides a detailed guide for running BEHDS. Follow the steps below to ensure proper data structure and usage of the tool.\nFor an example walkthrough using fictional questionnaires and data, click here."
+  },
+  {
+    "objectID": "behds.html#initial-setup",
+    "href": "behds.html#initial-setup",
+    "title": "BIDS Format and Validation",
+    "section": "Initial Setup",
+    "text": "Initial Setup\nDownload BEHDS from here.\nAfter downloading and extracting BEHDS, you should have the following folder structure:\n\nBEHDS 1.0.0/\n\ncode/\nprojectdata/\nrawdata/\nresources/\ntemplates/\nbehds.R\n\n\n\nStep 1: Setting Up Project Data\n\nCreate a Project Folder:\n\nInside the projectdata/ directory, create a new folder named after your project (e.g., YourProjectName).\n\nCopy Templates:\n\nCopy template.xlsx from the templates/ folder to your project folder. Rename the file to YourProjectName.xlsx and fill it in with demographic data or variables not collected via questionnaires. Ensure that the variable names in the “ItemName” column match those used in the raw data.\nAlso, copy template_info.xlsx from the templates/ folder, rename it to YourProjectName_info.xlsx, and fill in the required information.\n(optional) If you want to change the participant_id of your raw data to a new id, copy template_id.xlsx from the templates/ folder. Rename it to YourProjectName_id.xlsx, and fill the old id (same as in raw data) in the old_id column and the new id in the new_id column. This could be useful if you use a different id on your behavioral data and you need to give it the same id as the MRI data.\n\n\n\n\nStep 2: Organizing Raw Data\n\nCreate Raw Data Folder:\n\nInside the rawdata/ directory, create a folder named after your project (e.g., YourProjectName).\n\nPrepare and Structure Data:\n\nModify your raw data in a spreadsheet program such as Excel. The data should be organized according to the program’s requirements (see next section).\nSave your modified raw data file as YourProjectName_raw.xlsx (or any other name). Consistency in naming conventions will help keep things organized.\n\n\n\nStructuring the Raw Data Files\n\nFirst Column (ID):\n\nThe first column must be labeled “id” and contain a unique identifier for each participant. This identifier must be consistent across all files.\n\nSecond Column (Session):\n\nThe second column should be labeled “ses” and must indicate the session or measurement time point (e.g., 1, 2, 3). If there is only one session, enter “1.”. If there is a prescreening, you can give that the the time pint 0. Ensure each measurement time point has its row in the file.\n\n\nNote: You can create multiple files containing all your data; it does not all have to be in one file. Ensure the “id” and “ses” columns are correct in each file.\n\nFile Naming Guidelines:\n\nnon-questionnaire data\n\nThe subsequent columns for non questionnaire data should be named and filled according to all the items provided in the project data step.\n\nquestionnaire data\n\nThe columns for questionnaire items must be in the correct order.\nColumn names must include the name of the questionnaire and must not be immediately preceded or followed by a letter.\nExample for the questionnaire “TEST”:\n\nCorrect: TEST-01, TEST01, TEST_01, [TEST01], TEST[TEST01]\nIncorrect: QTEST01, TESTshort01, kTEST01, test01\n\n\n\n\n\n\n\nStep 3: Managing Questionnaires\n\nCreating New Questionnaires:\n\nIf a required questionnaire is not present in the resources folder, you can create it. Use the questionnairetemplate.xlsx file from the templates folder, and save the new questionnaire in resources with the appropriate name (e.g., TEST.xlsx for a test questionnaire).\n\nModifying Questionnaires:\n\nIf you modify an existing questionnaire, save it in the projectdata folder to give it priority over the one in resources.\n\n\n\n\nFinal Data Structure\nThe completed data structure should look like this:\n\nprojectdata/:\n\nYourProjectName/\n\nYourProjectName.xlsx\nYourProjectName_info.xlsx\nTEST.xlsx (Modified version of a questionnaire, if applicable)\n\n\nrawdata/:\n\nYourProjectName/\n\nRawdatafile1.xlsx\nRawdatafile2.xlsx\n\n\nresources/:\n\nQuestionnaire1.xlsx\nQuestionnaire2.xlsx\n\n\n\n\nRunning BEHDS.R\n\nOpen behds.R in RStudio.\nIn the second line of the script, enter your project name (e.g., proj = \"YourProjectName\").\nClick the Source button in the upper-right corner of RStudio.\nWait for the process to complete.\nThe converted BIDS structure will be saved in bids/YourProjectName/rawdata/.\nThe feedback file YourProjectName.html and finished .csv files will be in bids/YourProjectName/derivatives/.\n\n\nBy following these steps, you can successfully organize and convert your data into the BIDS format using BEHDS.R."
+  },
+  {
+    "objectID": "bids.html",
+    "href": "bids.html",
+    "title": "The BIDS Format and Validation",
+    "section": "",
+    "text": "The Brain Imaging Data Structure (BIDS) is a standardized framework designed to organize and describe neuroimaging and behavioral data. Following the BIDS standard ensures that your dataset is structured in a way that facilitates sharing, reuse, and analysis by both humans and machines. This standardization enhances collaboration and reproducibility within the research community.\n\n\nBIDS organizes data into datasets, each containing multiple modalities (e.g., MRI, behavioral experiments). These modalities are stored in their own subdirectories. Each dataset includes the following key components:\n\ndataset_description.json: A file at the dataset root that contains metadata about the dataset, such as the dataset name, version, and other details.\nparticipants.tsv: A tab-separated file that lists all participants in the study. This file can include columns for various participant attributes, such as age, gender, or group assignment.\nSubdirectories for each subject (sub-&lt;label&gt;): Each participant has a unique subdirectory. If applicable, each subject folder may also contain subdirectories for each session (ses-&lt;label&gt;), organizing data from different time points or experiments. Further modality-specific files and folders are stored within these directories.\n\nFor behavioral data, the BIDS standard recommends specific file formats and conventions to ensure that your dataset is compatible with neuroimaging data stored in the same structure.\n\n\n\nThe primary goal of BIDS is to create datasets that are easily understood and reusable by other researchers. By following BIDS standards, your data becomes more accessible, better organized, and ready for integration with other datasets—especially in cases of multimodal analysis, where behavioral and neuroimaging data are combined."
+  },
+  {
+    "objectID": "bids.html#overview-of-bids",
+    "href": "bids.html#overview-of-bids",
+    "title": "The BIDS Format and Validation",
+    "section": "",
+    "text": "The Brain Imaging Data Structure (BIDS) is a standardized framework designed to organize and describe neuroimaging and behavioral data. Following the BIDS standard ensures that your dataset is structured in a way that facilitates sharing, reuse, and analysis by both humans and machines. This standardization enhances collaboration and reproducibility within the research community.\n\n\nBIDS organizes data into datasets, each containing multiple modalities (e.g., MRI, behavioral experiments). These modalities are stored in their own subdirectories. Each dataset includes the following key components:\n\ndataset_description.json: A file at the dataset root that contains metadata about the dataset, such as the dataset name, version, and other details.\nparticipants.tsv: A tab-separated file that lists all participants in the study. This file can include columns for various participant attributes, such as age, gender, or group assignment.\nSubdirectories for each subject (sub-&lt;label&gt;): Each participant has a unique subdirectory. If applicable, each subject folder may also contain subdirectories for each session (ses-&lt;label&gt;), organizing data from different time points or experiments. Further modality-specific files and folders are stored within these directories.\n\nFor behavioral data, the BIDS standard recommends specific file formats and conventions to ensure that your dataset is compatible with neuroimaging data stored in the same structure.\n\n\n\nThe primary goal of BIDS is to create datasets that are easily understood and reusable by other researchers. By following BIDS standards, your data becomes more accessible, better organized, and ready for integration with other datasets—especially in cases of multimodal analysis, where behavioral and neuroimaging data are combined."
+  },
+  {
+    "objectID": "bids.html#validating-your-bids-dataset",
+    "href": "bids.html#validating-your-bids-dataset",
+    "title": "The BIDS Format and Validation",
+    "section": "Validating Your BIDS Dataset",
+    "text": "Validating Your BIDS Dataset\nIt is crucial to validate your dataset to ensure compliance with the BIDS standard. Validation tools check the folder structure, file naming, and metadata to detect any deviations from the BIDS specification.\n\nHow to Use the BIDS Validator\nYou can validate your BIDS dataset using the BIDS Validator tool. There are two options for using the validator: - Online Version: The BIDS Validator can be accessed online without installation. Visit the BIDS Validator webpage for more information. - Local Installation: If you prefer, you can install the BIDS Validator on your local machine. Instructions for installation are available on the same webpage.\nFor further information on the BIDS specification, including more detailed instructions on how to structure and describe your data, refer to the BIDS Specification website.\n\nBy adhering to the BIDS format and ensuring validation, your dataset will be compliant with a widely recognized standard, facilitating future use and collaboration within the scientific community."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "BEHDS",
+    "section": "",
+    "text": "BEHDS is a tool for data management of behavioural scientific data that automatically transforms multiple data files into the standardized BIDS format (Behavioural bids) and into combined .csv files (Behavioural data structure manager)."
+  },
+  {
+    "objectID": "index.html#what-is-behds",
+    "href": "index.html#what-is-behds",
+    "title": "BEHDS",
+    "section": "",
+    "text": "BEHDS is a tool for data management of behavioural scientific data that automatically transforms multiple data files into the standardized BIDS format (Behavioural bids) and into combined .csv files (Behavioural data structure manager)."
+  },
+  {
+    "objectID": "index.html#what-are-the-benefits-of-using-behds",
+    "href": "index.html#what-are-the-benefits-of-using-behds",
+    "title": "BEHDS",
+    "section": "What are the benefits of using BEHDS?",
+    "text": "What are the benefits of using BEHDS?\n\nStandardized and transparent output file\nFeedback about progress of the project\nFeedback about missing data\nFeedback about impossible values\nOverview of the questionnaires used\nAutomated creation of a BIDS data structure for the project\nAutomatic calculation of inverted scales\nAutomatic calculation of total scores and subscale scores (optional)"
+  },
+  {
+    "objectID": "index.html#background",
+    "href": "index.html#background",
+    "title": "BEHDS",
+    "section": "Background",
+    "text": "Background\nThe realm of neuroimaging and behavioral research is rapidly evolving, necessitating standardized data formats to facilitate data sharing, reproducibility, and secondary analysis. Currently, a significant gap exists in tools that seamlessly convert behavioral questionnaire data into a widely accepted format. Our custom program bridges this gap by offering a streamlined solution for converting varied behavioral data into the Brain Imaging Data Structure (BIDS) format. This conversion is pivotal for researchers and students who work with behavioral data, as it not only enhances data organization and accessibility but also ensures compliance with the growing standards of neuroimaging data analysis. The adoption of BIDS for behavioral data allows for greater integration with neuroimaging datasets, opening avenues for comprehensive multimodal analyses. As no such programs are widely available, our tool represents a significant advancement in the field, offering an intuitive, efficient pathway to standardization that is crucial for advancing research and facilitating collaborations across institutions."
+  },
+  {
+    "objectID": "index.html#target-audience",
+    "href": "index.html#target-audience",
+    "title": "BEHDS",
+    "section": "Target Audience",
+    "text": "Target Audience\nThis documentation is designed for students and researchers working with behavioral data, particularly those in the fields of psychology, neuroscience, and cognitive science. Whether you are new to data analysis or an experienced researcher looking for a standardized way to manage and share your data, this guide will help you understand how to use our program to convert your behavioral questionnaire data into the BIDS format effectively."
+  },
+  {
+    "objectID": "index.html#get-started",
+    "href": "index.html#get-started",
+    "title": "BEHDS",
+    "section": "Get started",
+    "text": "Get started\nTo get started with BEHDS press here"
+  }
+]
